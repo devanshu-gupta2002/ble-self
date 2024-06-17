@@ -1,5 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, FlatList, ScrollView } from 'react-native';
+import { useEffect, useReducer, useRef, useState } from 'react';
+import { BleManager } from 'react-native-ble-plx';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import tw from "twrnc";
+
+const manager = new BleManager();
 
 export default function App() {
   return (
